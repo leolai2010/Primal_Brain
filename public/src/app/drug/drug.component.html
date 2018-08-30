@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drug List</title>
+</head>
+<body>
+  <div class="animated fadeInUp container">
+  <h3>Drug List</h3>
+  <br>
+    <div class="card-deck">
+      <div *ngFor="let drug of drugs" class="card text-center">
+        <br>
+        <img class="card-img-top dimgsize rounded mx-auto d-block" src="../../assets/uploads/{{drug.drugname}}.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ drug.drugname }}</h5>
+          <p class="card-text">Concentration: {{ drug.concentration }} (μL/mL)</p>
+          <p class="card-text"><small class="text-muted">Last updated {{ drug.updatedAt }}</small></p>
+        </div>
+        <button (click)="deleteClick(drug._id)" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <br>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="d-flex justify-content-center">
+    <button [routerLink]="['/intelligence']" type="button" class="btn btn-danger">Back</button>
+  </div>
+</body>
+</html>

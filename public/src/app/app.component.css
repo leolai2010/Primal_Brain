@@ -1,0 +1,7 @@
+#brainimg{
+    width: 9%;
+    position: fixed;
+    left: 45%;
+    top: 0px;
+    z-index: -1;
+}

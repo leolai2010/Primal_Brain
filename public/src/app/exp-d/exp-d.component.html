@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experiment Design</title>
+</head>
+<body>
+<div class="container border">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Hypothesis</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="instrument-tab" data-toggle="tab" href="#instrument" role="tab" aria-controls="instrument" aria-selected="false">Specification of Instrumentation</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="software-tab" data-toggle="tab" href="#software" role="tab" aria-controls="software" aria-selected="false">Video Processing and Animal Tracking</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <br>
+      <p>The locomotive stimulation revolves around the two light-sensing eye spots
+          connected to the nervous tissue cluster in which under a specific wavelength will stimulate
+          planarian’s movement; a recent report has demonstrated that planarians will change in
+          behavior and experience light phototaxis depending on the wavelength of light utilized. 
+      </p>
+      <img class="expimg" src="../assets/images/expintro.png">
+      <h3>Hypothesis</h3>
+      <p>
+          Using such characteristic, we can measure the locomotor behavior in response to
+          constant light exposure and constant wavelength thus giving us a controlled behavior to
+          differentiate between locomotor activity under different drug conditions.
+      </p>
+      <img  usemap="#expmap" class="expimgsmall" src="../assets/images/expdcycle.png">
+      <map name="expmap">
+        <area placement="right" 
+              ngbTooltip="To begin testing, animals were initially kept in the dark in the environmental
+              chamber right before use. For each trial, four animals (sized 1.0 – 1.5 cm in length) were
+              randomly selected from their holding container and placed into four different clear plastic
+              petri dishes 5.0 cm in diameter containing 2 ml of the control solution. Locomotor activity
+              was then video recorded for 5 minutes. A control test was first initiated with a minimum
+              of eight animal trials in simple 2 ml Instant Ocean Salt Distilled Water Solution. Animals
+              were used only once and not reused." 
+              coords="170,50,401,137" 
+              shape="rect">
+        <area placement="right" 
+              ngbTooltip="Illuminance value is measured with a digital lux meter (Dr. Meter, model:
+              LX1330B) to ensure the correct color temperature is being projected into the Petri dish. 
+              Cameras are also calibrated to ensure distance will reflect pixel conversion accuracy which
+              is done through calculation using NIH ImageJ software "
+              coords="385,160,558,229" shape="rect">
+        <area placement="right" 
+              ngbTooltip="For drug exposures before subjecting the worms to
+              the drug solutions which had been prepared beforehand the control values were calculated
+              to be within historical velocity normal values. Planarians were exposed to drug
+              concentrations of 2, 5, 15, 30, 60 and 120 µg/ml. Concentration range
+              was chosen because we were primarily interested in determining adverse effect levels for
+              each compound at concentrations relevant for drug dissolution. A minimum of eight animal
+              trials was used for each drug concentration, and animals were used only once and not
+              reused."
+              coords="290,384,478,476" shape="rect">
+        <area placement="right" 
+              ngbTooltip="The video was acquired using a USB plug and play HD Camera that has 15
+              megapixels, 1280x960 resolution, and records at 30 frames per second."
+              coords="43,384,231,456" shape="rect">
+        <area placement="right" 
+              ngbTooltip=" MTrack2 plugin (Nico Stuurman) was used to track the worm mass centroid over
+              time. The plugin successfully tracked all animals in the petri dish, and overall frames for
+              greater than 95% of animals tracked. Image Calculator
+              each trial the distance traveled in centimeter for 5 minutes under each condition was
+              calculated using the resulting MTrack2 plugin of x and y coordinates"
+              coords="23,198,204,281" shape="rect">
+      </map>
+      <div class="d-flex justify-content-center">
+        <img class="expimgmed" src="../assets/images/Analysis.png">
+      </div>
+      <br>
+      <h4 class="animated infinite bounce">For more detailed Standard of Procedure please check the Thesis Section</h4>
+    </div>
+    <div class="tab-pane fade" id="instrument" role="tabpanel" aria-labelledby="instrument-tab">
+      <div clas="container-fluid">
+      <div class="card-deck m-2">
+        <div class="card">
+          <img class="card-img-top" src="../../assets/images/boxmain.png">
+          <div class="card-body">
+            <h5 class="card-title">Multi-Channel System</h5>
+              <ul class="card-text">
+                <li>Increase Concentration and sample size will help to develop precise dosage response base on locomotion</li>
+                <li>Comparative Analysis is now possible in real-time</li>
+              </ul>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="../../assets/images/computermain.png">
+          <div class="card-body">
+            <h5 class="card-title">Computer System Specification</h5>
+              <ul class="card-text">
+                <li>OS: Windows 10 64bit</li>
+                <li>CPU: Intel® Core™ i7-6700 4.0GHz</li>
+                <li>HD Graphics 530 Intel® H110</li>
+                <li>Memory DDR4 2133MHz 8G</li>
+                <li>Storage 2TB SATA Hard Drive
+                    (7200RPM) Hybrid 8GB SSD</li>
+                <li>Power Supply 300W</li>
+              </ul>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="../../assets/images/lightboxmain.png">
+          <div class="card-body">
+            <h5 class="card-title">Lightbox System Specification</h5>
+              <ul class="card-text">
+                <li>Cherry wood exterior
+                  <ul>
+                    <li>Pull out top shelf</li>
+                    <li>Exchangeable bottom plank</li>
+                  </ul>
+                </li>
+                <li>Four HD Cameras
+                  <ul>
+                    <li>30 frames per second</li>
+                    <li>15 megapixel </li>
+                    <li>Adjustable focus and zoom </li>
+                  </ul>
+                </li>
+                <li>Light Source: LED Panel
+                  <ul>
+                    <li>Dimension: 15.63” x 11.81”</li>
+                    <li>Active area: 13.78” x 9.84”</li>
+                    <li>Color temperature: 8000K10000K</li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div clas="container-fluid">
+      <div class="card-deck m-2">
+        <div class="card">
+          <img class="card-img" src="../../assets/images/interior.png">
+        </div>
+        <div class="card">
+          <img class="card-img" src="../../assets/images/lightpad.png">
+        </div>
+        <div class="card">
+          <img class="card-img" src="../../assets/images/cameras.png">
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="software" role="tabpanel" aria-labelledby="software-tab">
+      <br>
+      <div class="row">
+        <div class="col">
+            <p class="font-weight-bold">Initial Recording</p>
+            <iframe width="100%" height="250px" src="../../assets/videos/initialrecording.mp4" allowfullscreen></iframe>
+            <p>The video was acquired using a USB plug and play HD Camera that has 15
+                megapixels, 1280x960 resolution, and records at 30 frames per second. Resulting video
+                files were converted into image stacks using virtualdub64 software
+                (http://virtualdub.org/)with appropriate program plug-ins and further processed using
+                ImageJ software. In ImageJ, file sizes were reduced by changing the file type to 8-bit
+                and resizing the images to 640x480 resolution.
+              </p>
+        </div>
+        <div class="col">
+            <p class="font-weight-bold">Background Homogenization</p>
+            <iframe width="100%" height="250px" src="../../assets/videos/backgroundremove.mp4" allowfullscreen></iframe>
+            <p>The image is then modified with Zprojection
+                function at maximum intensity and using the original image to create stack and
+                difference images by using Image Calculator function. The resulting image
+                stack was then modified to a different threshold using the “maximum entropy” preset
+            </p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+            <p class="font-weight-bold">Coordinates Tracking</p>
+            <iframe width="100%" height="250px" src="../../assets/videos/tracking.mp4" allowfullscreen></iframe>
+            <p>MTrack2 plugin (Nico Stuurman) was used to track the worm mass centroid over
+                time. The plugin successfully tracked all animals in the petri dish, and overall frames for
+                greater than 95% of animals tracked. For falsely identified tracks (e.g., solution bubbles)
+                the data was manually analyzed. Only data from the object tracked over the duration of
+                all frames in the image stack and visually identified as the animal were used, or the
+                parameters of the plugin were adjusted only to detect the animal and reprocessed. 
+              </p>
+        </div>
+        <div class="col">
+          <p class="font-weight-bold">Path Pattern</p>
+          <img src="../..//assets/images/pathfile.png"/>
+          <p>For each trial the distance traveled in centimeter for 5 minutes under each condition was
+              calculated using the resulting MTrack2 plugin of x and y coordinates. Macros
+              were created to automate the image processing that both reduced bias in the locomotor
+              activity analysis and overall analysis time. Resulted tracking pixel distance
+              was first converted to distance in centimeter then divided by time to obtain velocity.
+              </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="d-flex justify-content-center">
+    <button [routerLink]="['/intelligence']" type="button" class="btn btn-danger">Back</button>
+  </div>
+  <br>
+</div>
+</body>
+</html>

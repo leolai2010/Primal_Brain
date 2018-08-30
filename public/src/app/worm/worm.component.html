@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Planarian List</title>
+</head>
+<body>
+  <div class="animated fadeInUp container">
+  <h3>Planarian List</h3>
+  <br>
+    <div class="card-deck">
+      <div class="card text-center">
+        <div *ngFor="let drug of drugs">
+        <div *ngFor="let worm of drug.worms" class="card-body">
+        <div *ngIf="worm.wormname == 'AMP'">
+          <img class="" src="../../assets/images/AMP.png"/>
+        </div>
+        <div *ngIf="worm.wormname == 'MOR'">
+            <img class="" src="../../assets/images/MOR.png"/>
+        </div>
+        <div *ngIf="worm.wormname == 'THC'">
+            <img class="" src="../../assets/images/THC.png"/>
+        </div>
+        <div *ngIf="worm.wormname == 'METH'">
+            <img class="" src="../../assets/images/METH.png"/>
+        </div>
+          <h5 class="card-title">{{ worm.wormname }}</h5>
+          <p class="card-text">Substance Under: {{drug.drugname}}<br>Velocity: {{worm.velocity}}<br>Behavior: {{worm.behavior}}</p>
+          <p class="card-text"><small class="text-muted">Last updated {{ worm.updatedAt }}</small></p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

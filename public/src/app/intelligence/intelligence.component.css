@@ -1,0 +1,45 @@
+.sidenav {
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    background: #eee;
+    padding: 20px 16px;
+    border-radius: 8px
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #3a5c7f;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: blue;
+}
+
+.main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.datavalid{
+    color:lightgreen;
+    font-size: x-small;
+}
+.datainvalid{
+    color:red;
+    font-size: x-small;
+}
+.entry{
+    padding: 10px;
+    border: solid 1px rgba(175, 175, 175, 0.87);
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px 0px #888888;
+}

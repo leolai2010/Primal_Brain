@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Application</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <div class="ttt animated fadeInLeft">
+        <h3>Draw Path Here</h3>
+          <div>
+              <canvas drawable (newImage)="predict($event)"></canvas>
+              <br>
+          </div>
+          <button class="btn btn-sm btn-danger" (click)="canvas.clear()">Erase</button>
+          <p></p>
+      </div>
+      </div>
+      <div class="col-8">
+        <div class="ttt animated fadeInUp">
+          <h3>TensorFlow Planarian Path Prediction</h3>
+          <chart [data]="predictions"></chart>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <br>
+  <p></p>
+  <br>
+  <p></p>
+  <br>
+  <p></p>
+  <br>
+  <p></p>
+  <br>
+  <p></p>
+  <br>
+</body>
+</html>

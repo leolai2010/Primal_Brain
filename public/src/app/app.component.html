@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Landing</title>
+</head>
+<body>
+  <div class="animated fadeInDown jumbotron bg-light ">
+    <img id="brainimg" src="../assets/images/Brain.png" alt="Brain">
+    <br>
+    <br>
+    <br>
+    <h1 class="display-4 text-center">The Primal Brain</h1>
+    <p class="lead text-center">Neuropharmacological Screening of Drugs of Abuse Using Freshwater Planarians</p>
+    <hr class="my-4">
+    <p class="text-center">A Toxicology Research Done by Dr. Jay R. Vargas & Leo Lai</p>
+    <br>
+    <ul class="nav nav-pills nav-fill" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="pill" [routerLink]="['/home']" role="tab">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" [routerLink]="['/intelligence']" role="tab">Experiment & Data Entry</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="pill" [routerLink]="['/application']" role="tab">Machine Learning & Data Analysis</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" [routerLink]="['/about']" role="tab">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="pill" [routerLink]="['/thesis']" role="tab">Thesis & Citation</a>
+        </li>
+    </ul>
+  </div>
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
+  <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/intelligence']">Experiment & Data Entry</a></li>
+        <li class="breadcrumb-item "><a [routerLink]="['/application']">Machine Learning & Data Analysis</a></li>
+        <li class="breadcrumb-item "><a [routerLink]="['/about']">About</a></li>
+        <li class="breadcrumb-item "><a [routerLink]="['/thesis']">Thesis & Citation</a></li>
+      </ol>
+  </nav>
+</body>
+</html>

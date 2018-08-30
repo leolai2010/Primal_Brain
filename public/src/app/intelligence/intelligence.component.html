@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="list-group animated fadeInLeft" id="list-tabe" role="tablist">
+          <a class="list-group-item list-group-item-action" id="list-profile-list" [routerLink]="['/drug']">List of Drugs</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" [routerLink]="['/worm']">List of Planarians</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" [routerLink]="['/mn-m']">Material & Methods</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" [routerLink]="['/exp-d']">Experimental Design</a>
+        </div>
+        <br>
+      </div>
+      <div class="col-sm-8">
+        <div class="mainform animated fadeInUp ">
+          <h3>Database Entry</h3>
+          <br>
+          <div class="entry">
+          <h4>Drug Entry </h4>
+          <form enctype="multipart/form-data" (submit)="onNewDrugSubmit()">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="drugname">Substance/Chemical Name:</label>
+                <input 
+                  type="text" 
+                  name="drugname" 
+                  class="form-control" 
+                  id="name"
+                  required minlength="3"
+                  [(ngModel)]="newDrug.drugname"
+                  #drugname="ngModel"/>
+                  <span class="datainvalid" *ngIf="drugname.errors">Name is required and must be atleast 3 Characters</span>   
+                  <span class="datavalid" *ngIf="drugname.valid">Name is Good!</span>     
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="concentration">Concentration (μL/mL):</label>
+                  <input 
+                      type="number" 
+                      name="concentration" 
+                      class="form-control" 
+                      id="concentration"
+                      required minlength="1"
+                      [(ngModel)]="newDrug.concentration"
+                      #concentration="ngModel"/>
+                  <span class="datainvalid" *ngIf="concentration.errors">Concentration is required and must be atleast 1 Digit or More</span>   
+                  <span class="datavalid" *ngIf="concentration.valid">Concentration is Good!</span>   
+              </div>
+              <div class="form-group mx-auto">
+                  <label for="image">Chemical Structure/Sample Image</label>
+                  <input name="image" 
+                        type="file" 
+                        class="form-control-file" 
+                        (change)="onDrugFileSelected($event)"/>
+              </div>
+            </div>
+            <div class="d-flex justify-content-end">
+              <button [disabled]="drugname.invalid || concentration.invalid" class="btn btn-outline-dark">Upload</button>
+            </div>
+          </form>
+          </div>
+          <br>
+          <div class="entry">
+            <h4>Planarian Entry </h4>
+            <form enctype="multipart/form-data" (submit)="onNewWormSubmit()">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="drugsname">Substance/Chemical:</label>
+                  <br>
+                    <select name="drugId" [(ngModel)]="drugId">
+                        <option *ngFor="let drug of drugs" value="{{drug._id}}">{{drug.drugname}}</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="wormname">Planarian Tag Name:</label>
+                  <input 
+                    type="text" 
+                    name="wormname" 
+                    class="form-control" 
+                    id="wormname"
+                    required minlength="3"
+                    [(ngModel)]="newWorm.wormname"
+                    #wormname="ngModel"/>
+                    <span class="datainvalid" *ngIf="wormname.errors">Name is required and must be atleast 3 Characters</span>   
+                    <span class="datavalid" *ngIf="wormname.valid">Name is Good!</span>     
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="velocity">Velocity:</label>
+                    <input 
+                        type="number" 
+                        name="velocity" 
+                        class="form-control" 
+                        id="velocity"
+                        required minlength="1"
+                        [(ngModel)]="newWorm.velocity"
+                        #velocity="ngModel"/>
+                    <span class="datainvalid" *ngIf="velocity.errors">Velocity is required and must be atleast 1 Digit or More</span>   
+                    <span class="datavalid" *ngIf="velocity.valid">Velocity is Good!</span>   
+                </div>
+                <div class="form-group col-md-6">
+                        <label for="behavior">Behavior Observed:</label>
+                        <input 
+                          type="text" 
+                          name="behavior" 
+                          class="form-control" 
+                          id="behavior"
+                          required minlength="3"
+                          [(ngModel)]="newWorm.behavior"
+                          #behavior="ngModel"/>
+                          <span class="datainvalid" *ngIf="behavior.errors">Behavior is required and must be atleast 3 Characters</span>   
+                          <span class="datavalid" *ngIf="behavior.valid">Behavior is Good!</span>     
+                </div>
+                <div class="form-group mx-auto">
+                    <label for="media">Planarian Path Image</label>
+                    <input name="media" 
+                          type="file" 
+                          class="form-control-file" 
+                          (change)="onWormFileSelected($event)"/>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button [disabled]="wormname.invalid || velocity.invalid || behavior.invalid" class="btn btn-outline-dark">Upload</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <br>
+  <br>
+</body>
+</html>
